@@ -1,0 +1,25 @@
+//CATEGORY: product buttons
+ul.products li.product .button {
+	width: 100%;
+	padding: 16px;
+}
+//confirm usage of site-main
+.site-main ul.products li.product {
+	border: 1px solid;
+    position: relative;
+    padding: 8px;
+}
+
+ul.products li.product img {
+	width: 100%;
+	max-width: 100%;
+}
+
+.onsale {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	border: none;
+	padding: 8px 15px;
+	background-color: #ffc523;
+}

@@ -1,0 +1,34 @@
+ul.products li.product .button {
+  width: 100%;
+  padding: 16px; }
+
+.site-main ul.products li.product {
+  border: 1px solid;
+  position: relative;
+  padding: 8px; }
+
+ul.products li.product img {
+  width: 100%;
+  max-width: 100%; }
+
+.onsale {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: none;
+  padding: 8px 15px;
+  background-color: #ffc523; }
+
+.col-full {
+  max-width: 79.958em; }
+
+.site-header {
+  border-top: 16px solid #3c1753; }
+  .site-header > .col-full {
+    max-width: 100% !important;
+    margin: 0; }
+  .site-header .nav-wrapper {
+    background-color: black; }
+
+.home.blog .site-header, .home.page:not(.page-template-template-homepage) .site-header, .home.post-type-archive-product .site-header {
+  margin-bottom: 0; }

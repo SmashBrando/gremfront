@@ -41,7 +41,7 @@ final class GremFront_Customisations {
 	 * @return void
 	 */
 	public function gremfront_customisations_css() {
-		wp_enqueue_style( 'custom-css', plugins_url( '/style.css', __FILE__ ) );
+		wp_enqueue_style( 'custom-css', plugins_url( '/styles.css', __FILE__ ) );
 	}
 
 	/**

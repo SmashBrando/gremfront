@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     neat = require('node-neat').includePaths;
 
 var paths = {
-    scss: 'sass/*.scss'
+    scss: 'sass/styles.scss'
 };
 
 gulp.task('styles', function () {
