@@ -1,0 +1,26 @@
+{
+  "name": "happygremlin",
+  "version": "1.0.0",
+  "description": "This is a Theme for The Happy Gremlin Company. Please read below for more information regarding the theme structure, workflow, etc...",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmashBrando/happygremlin.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SmashBrando/happygremlin/issues"
+  },
+  "homepage": "https://github.com/SmashBrando/happygremlin#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.0",
+    "gulp-watch": "^4.3.5",
+    "node-bourbon": "^4.2.3",
+    "node-neat": "^1.7.2"
+  }
+}
