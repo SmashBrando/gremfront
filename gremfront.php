@@ -41,6 +41,7 @@ final class GremFront_Customisations {
 	 * @return void
 	 */
 	public function gremfront_customisations_css() {
+		wp_enqueue_style( 'roboto', '//fonts.googleapis.com/css?family=Roboto:400,300,500,700' );
 		wp_enqueue_style( 'custom-css', plugins_url( '/styles.css', __FILE__ ) );
 	}
 

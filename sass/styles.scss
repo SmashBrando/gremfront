@@ -1,26 +1,20 @@
+/*****************
+* variables
+*****************/
+@import "variables";
+/*****************
+* mixins
+*****************/
+@import "mixins";
+/*****************
+* global
+*****************/
+@import "global";
+/*****************
+* header
+*****************/
+@import "header";
+/*****************
+* woocommerce
+*****************/
 @import "products";
-
-
-
-
-//site widht 1400px
-.col-full {
-	max-width: 79.958em;
-}
-
-
-.site-header {
-	border-top: 16px solid #3c1753;
-	>.col-full {
-		max-width: 100% !important; //this fixes the width of the header so we can create a full widht nav
-		margin: 0;
-	}
-	.nav-wrapper {
-		background-color: black;
-	}
-}
-
-//Storefront override - needs testing
-.home.blog .site-header, .home.page:not(.page-template-template-homepage) .site-header, .home.post-type-archive-product .site-header {
-	margin-bottom: 0;
-}

@@ -1,9 +1,60 @@
+/*****************
+* variables
+*****************/
+/*****************
+* mixins
+*****************/
+/*****************
+* global
+*****************/
+body {
+  font-family: 'Roboto', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif; }
+
+.col-full {
+  max-width: 79.958em; }
+
+/*****************
+* header
+*****************/
+.site-header {
+  border-top: 16px solid #3c1753; }
+  .site-header > .col-full {
+    max-width: 100% !important;
+    margin: 0; }
+  .site-header .nav-wrapper {
+    background-color: #303030; }
+  .site-header .main-navigation {
+    padding-top: 0; }
+    .site-header .main-navigation ul.menu > li > a {
+      padding: 1.7em 1em; }
+    .site-header .main-navigation ul.nav-menu > li > a {
+      padding: 1.7em 1em; }
+    .site-header .main-navigation ul.menu ul li, .site-header .main-navigation ul.nav-menu ul li {
+      background-color: #303030; }
+
+.home.blog .site-header, .home.page:not(.page-template-template-homepage) .site-header, .home.post-type-archive-product .site-header {
+  margin-bottom: 0; }
+
+@media screen and (min-width: 768px) {
+  .woocommerce-active .site-header .site-header-cart {
+    padding-top: 0; }
+  .site-header-cart .cart-contents {
+    padding: 1.7em 1em; }
+  .site-header-cart .cart-contents:after {
+    top: 2.125em; } }
+
+/*****************
+* woocommerce
+*****************/
 ul.products li.product .button {
   width: 100%;
   padding: 16px; }
 
 .site-main ul.products li.product {
-  border: 1px solid;
+  border: 1px solid #dedede;
   position: relative;
   padding: 8px; }
 
@@ -13,22 +64,8 @@ ul.products li.product img {
 
 .onsale {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: -1px;
+  left: -1px;
   border: none;
   padding: 8px 15px;
   background-color: #ffc523; }
-
-.col-full {
-  max-width: 79.958em; }
-
-.site-header {
-  border-top: 16px solid #3c1753; }
-  .site-header > .col-full {
-    max-width: 100% !important;
-    margin: 0; }
-  .site-header .nav-wrapper {
-    background-color: black; }
-
-.home.blog .site-header, .home.page:not(.page-template-template-homepage) .site-header, .home.post-type-archive-product .site-header {
-  margin-bottom: 0; }

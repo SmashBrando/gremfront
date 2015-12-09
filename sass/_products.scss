@@ -5,7 +5,7 @@ ul.products li.product .button {
 }
 //confirm usage of site-main
 .site-main ul.products li.product {
-	border: 1px solid;
+	border: 1px solid $grey;
     position: relative;
     padding: 8px;
 }
@@ -17,9 +17,9 @@ ul.products li.product img {
 
 .onsale {
 	position: absolute;
-	top: 0px;
-	left: 0px;
+	top: -1px;
+	left: -1px;
 	border: none;
 	padding: 8px 15px;
-	background-color: #ffc523;
+	background-color: $yellow;
 }

@@ -1,0 +1,40 @@
+.site-header {
+	border-top: 16px solid $darkpurple;
+	> .col-full {
+		max-width: 100% !important; //this fixes the width of the header so we can create a full widht nav
+		margin: 0;
+	}
+	.nav-wrapper {
+		background-color: $charcoalgrey;
+	}
+	.main-navigation {
+		padding-top: 0;
+		ul.menu > li > a{
+			padding: 1.7em 1em;
+		}
+		ul.nav-menu > li > a {
+			padding: 1.7em 1em;
+		}
+		ul.menu ul li, ul.nav-menu ul li {
+			background-color: $charcoalgrey;
+		}
+	}
+	
+}
+
+//Storefront override - needs testing
+.home.blog .site-header, .home.page:not(.page-template-template-homepage) .site-header, .home.post-type-archive-product .site-header {
+	margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.woocommerce-active .site-header .site-header-cart {
+		padding-top: 0;
+	}
+	.site-header-cart .cart-contents {
+		padding: 1.7em 1em;
+	}
+	.site-header-cart .cart-contents:after {
+		top: 2.125em;
+	}
+}
