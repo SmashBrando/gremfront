@@ -23,3 +23,12 @@ ul.products li.product img {
 	padding: 8px 15px;
 	background-color: $yellow;
 }
+
+.woocommerce-tabs ul.tabs {
+	display: none;
+	width: 0%;
+}
+
+.woocommerce-tabs .panel {
+	width: 100%;
+}

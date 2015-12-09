@@ -14,8 +14,19 @@ This plugin requires NPM & Gulp. To get started run the following command from t
 $ npm install
 ```
 
-### Todos
+### Todos: code
 
- - Expand Readme
- - Add Update Functionality
- - Think of more todos
+ - Style Product Meta
+ - Style Product Page (remove reviews, cleanup layout)
+ - Add Blog Feed Widget
+ - Add Section Title Widget
+ - Add Features Widget
+ - Add Accordian Widget
+ - Add Forms and Style
+ - Confirm Navigation Structire
+
+### Todos: site
+
+ - Add Products (Photos, Descriptions, Prices, Variations)
+ - Add Brands (Brand Descriptions, Photos)
+ - Setup Checkout

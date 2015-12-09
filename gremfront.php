@@ -42,6 +42,7 @@ final class GremFront_Customisations {
 	 */
 	public function gremfront_customisations_css() {
 		wp_enqueue_style( 'roboto', '//fonts.googleapis.com/css?family=Roboto:400,300,500,700' );
+		wp_enqueue_style( 'owl-carousel', plugins_url( '/lib/owl-carousel/owl.carousel.css', __FILE__ ) );
 		wp_enqueue_style( 'custom-css', plugins_url( '/styles.css', __FILE__ ) );
 	}
 
@@ -50,7 +51,8 @@ final class GremFront_Customisations {
 	 * @return void
 	 */
 	public function gremfront_customisations_js() {
-		wp_enqueue_script( 'custom-js', plugins_url( '/scripts/scripts.js', __FILE__ ), array( 'jquery' ) );
+		wp_enqueue_script( 'owl-carousel', plugins_url( '/lib/owl-carousel/owl.carousel.min.js', __FILE__ ), array( 'jquery' ), true );
+		wp_enqueue_script( 'custom-js', plugins_url( '/scripts/scripts.js', __FILE__ ), array( 'jquery' ), true );
 	}
 
 	/**

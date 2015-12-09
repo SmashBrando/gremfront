@@ -7,7 +7,7 @@ $widget_custom_id = 'brandcar-' . $instance["panels_info"]["id"];
 		
 
 
-<div class="flexslider <?php echo $widget_custom_id; ?>" style="">
+<div class="brand-carousel" style="">
 	<div class="carousel-header">
 	<h1>
 		<?php if ( ! empty( $instance['happygremlin_title'] ) ) {
@@ -15,63 +15,37 @@ $widget_custom_id = 'brandcar-' . $instance["panels_info"]["id"];
 			}
 		?>
 	</h1>
-	<div class="arrows"></div>
+	<div class="arrows  <?php echo $widget_custom_id; ?>"></div>
 	</div>
+	<div class="<?php echo $widget_custom_id; ?>">
 	<?php echo do_shortcode('[product_brand_thumbnails]'); ?>
+	</div>
 </div>
 <script type="text/javascript">
-	(function($) {
+(function($) {
 
-		(function() {
-		  
-		  // store the slider in a local variable
-		  var $window = $(window),
-		      flexslider;
-		 
-		  // tiny helper function to add breakpoints
-		  function getGridSize() {
-		    return (window.innerWidth < 300) ? 2 :
-		     	   (window.innerWidth < 600) ? 4 :
-		           (window.innerWidth < 900) ? 7 : 8;
-		  }
-		 
-		  // $(function() {
-		  //   SyntaxHighlighter.all();
-		  // });
-		 
-		  $window.load(function() {
-		  	var wid = ".<?php echo $widget_custom_id; ?>";
-		  	var cid = ".<?php echo $widget_custom_id; ?> .arrows"
-		    $(wid).flexslider({
-		      animation: "slide",
-		      selector: ".brand-thumbnails > li",
-		      slideshow: false,
-		      animationLoop: false,
-		      itemWidth: 100,
-		      itemMargin: 10,
-		      nextText: ">",
-		      prevText: "<",
-		      minItems: getGridSize(), // use function to pull in initial value
-		      maxItems: getGridSize(), // use function to pull in initial value
-		      controlNav: false,
-		      controlsContainer: cid,
-		      start: function (slider) {
-			        flexslider = slider; //Initializing flexslider here.
-			    }
-		    });
-		  });
-		 
-		  // check grid size on resize event
-		  $window.resize(function() {
-		    var gridSize = getGridSize();
-		 
-		    flexslider.vars.minItems = gridSize;
-		    flexslider.vars.maxItems = gridSize;
-		  });
+	$( document ).ready(function() {
 
-		}());
-
-	})(jQuery);
+	  	$('.<?php echo $widget_custom_id; ?> > .brand-thumbnails').owlCarousel({
+		    loop:true,
+		    margin:10,
+		    nav:true,
+		    navContainer: '.arrows.<?php echo $widget_custom_id; ?>',
+		    responsive:{
+		        0:{
+		            items:2
+		        },
+		        768:{
+		            items:4
+		        },
+		        1000:{
+		            items:6
+		        }
+		    }
+		});
+	 });
+	
+})( jQuery );
 </script>
 
 <?php echo $args['after_widget']; ?>

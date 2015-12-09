@@ -69,3 +69,10 @@ ul.products li.product img {
   border: none;
   padding: 8px 15px;
   background-color: #ffc523; }
+
+.woocommerce-tabs ul.tabs {
+  display: none;
+  width: 0%; }
+
+.woocommerce-tabs .panel {
+  width: 100%; }

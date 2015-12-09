@@ -2,12 +2,9 @@
 
 <?php
 $widget_custom_id = 'blogcar-' . $instance["panels_info"]["id"];
-
 ?>
-		
 
-
-<div class="flexslider <?php echo $widget_custom_id; ?>" style="">
+<div class="blog-carousel">
 	<div class="carousel-header">
 	<h1>
 		<?php if ( ! empty( $instance['happygremlin_title'] ) ) {
@@ -15,9 +12,9 @@ $widget_custom_id = 'blogcar-' . $instance["panels_info"]["id"];
 			}
 		?>
 	</h1>
-	<div class="arrows"></div>
+	<div class="arrows <?php echo $widget_custom_id; ?>"></div>
 	</div>
-	<ul class="slides">
+	<div class="owl-carousl <?php echo $widget_custom_id; ?>">
 	<?php
 		// WP_Query arguments
 		$args = array (
@@ -34,7 +31,7 @@ $widget_custom_id = 'blogcar-' . $instance["panels_info"]["id"];
 		if ( $blog_carousel->have_posts() ) {
 			while ( $blog_carousel->have_posts() ) {
 				$blog_carousel->the_post();
-				echo '<li>';
+				echo '<div class="item">';
 				?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -57,7 +54,7 @@ $widget_custom_id = 'blogcar-' . $instance["panels_info"]["id"];
 
 				</article><!-- #post-## -->
 				<?php
-				echo '</li>';
+				echo '</div>';
 				
 			}
 		} else {
@@ -66,61 +63,35 @@ $widget_custom_id = 'blogcar-' . $instance["panels_info"]["id"];
 
 		// Restore original Post Data
 		wp_reset_postdata();
-			?>
-	</ul>
+		?>
+	</div>
 </div>
+
 <script type="text/javascript">
-	(function($) {
+(function($) {
 
-		(function() {
-		  
-		  // store the slider in a local variable
-		  var $window = $(window),
-		      flexslider;
-		 
-		  // tiny helper function to add breakpoints
-		  function getGridSize() {
-		    return (window.innerWidth < 300) ? 1 :
-		     	   (window.innerWidth < 600) ? 2 :
-		           (window.innerWidth < 900) ? 3 : 4;
-		  }
-		 
-		  // $(function() {
-		  //   SyntaxHighlighter.all();
-		  // });
-		 
-		  $window.load(function() {
-		  	var wid = ".<?php echo $widget_custom_id; ?>";
-		  	var cid = ".<?php echo $widget_custom_id; ?> .arrows"
-		    $(wid).flexslider({
-		      animation: "slide",
-		      slideshow: false,
-		      animationLoop: false,
-		      itemWidth: 300,
-		      itemMargin: 10,
-		      nextText: ">",
-		      prevText: "<",
-		      minItems: getGridSize(), // use function to pull in initial value
-		      maxItems: getGridSize(), // use function to pull in initial value
-		      controlNav: false,
-		      controlsContainer: cid,
-		      start: function (slider) {
-			        flexslider = slider; //Initializing flexslider here.
-			    }
-		    });
-		  });
-		 
-		  // check grid size on resize event
-		  $window.resize(function() {
-		    var gridSize = getGridSize();
-		 
-		    flexslider.vars.minItems = gridSize;
-		    flexslider.vars.maxItems = gridSize;
-		  });
+	$( document ).ready(function() {
 
-		}());
-
-	})(jQuery);
+	  	$('.<?php echo $widget_custom_id; ?>').owlCarousel({
+		    loop:true,
+		    margin:10,
+		    nav:true,
+		    navContainer: '.arrows.<?php echo $widget_custom_id; ?>',
+		    responsive:{
+		        0:{
+		            items:1
+		        },
+		        768:{
+		            items:3
+		        },
+		        1000:{
+		            items:4
+		        }
+		    }
+		});
+	 });
+	
+})( jQuery );
 </script>
 
 <?php echo $args['after_widget']; ?>
